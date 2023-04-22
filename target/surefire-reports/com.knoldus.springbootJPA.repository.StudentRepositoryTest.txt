@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.knoldus.springbootJPA.repository.StudentRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.772 s <<< FAILURE! - in com.knoldus.springbootJPA.repository.StudentRepositoryTest
+saveStudentWithAddress  Time elapsed: 0.201 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [student.emailid_unique]
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.saveStudentWithAddress(StudentRepositoryTest.java:29)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.saveStudentWithAddress(StudentRepositoryTest.java:29)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'abc3@123.com' for key 'student.emailid_unique'
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.saveStudentWithAddress(StudentRepositoryTest.java:29)
+
+updateStudentNameByEmailIdTest  Time elapsed: 0.027 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [update student set firstname=? where emailid=?;]; SQL [n/a]
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.updateStudentNameByEmailIdTest(StudentRepositoryTest.java:56)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [update student set firstname=? where emailid=?;]
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.updateStudentNameByEmailIdTest(StudentRepositoryTest.java:56)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'emailid' in 'where clause'
+	at com.knoldus.springbootJPA.repository.StudentRepositoryTest.updateStudentNameByEmailIdTest(StudentRepositoryTest.java:56)
+

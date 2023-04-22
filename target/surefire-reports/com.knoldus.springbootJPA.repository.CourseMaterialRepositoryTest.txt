@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.knoldus.springbootJPA.repository.CourseMaterialRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in com.knoldus.springbootJPA.repository.CourseMaterialRepositoryTest
+SaveCourseMaterial  Time elapsed: 0.002 s  <<< ERROR!
+org.springframework.orm.jpa.JpaSystemException: Duplicate row was found and `ASSERT` was specified
+	at com.knoldus.springbootJPA.repository.CourseMaterialRepositoryTest.SaveCourseMaterial(CourseMaterialRepositoryTest.java:24)
+Caused by: org.hibernate.HibernateException: Duplicate row was found and `ASSERT` was specified
+	at com.knoldus.springbootJPA.repository.CourseMaterialRepositoryTest.SaveCourseMaterial(CourseMaterialRepositoryTest.java:24)
+

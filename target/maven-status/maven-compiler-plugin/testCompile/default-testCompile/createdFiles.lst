@@ -1,0 +1,4 @@
+com/knoldus/springbootJPA/repository/StudentRepositoryTest.class
+com/knoldus/springbootJPA/repository/CourseMaterialRepositoryTest.class
+com/knoldus/springbootJPA/repository/CourseRepositoryTest.class
+com/knoldus/springbootJPA/SpringbootJpaApplicationTests.class

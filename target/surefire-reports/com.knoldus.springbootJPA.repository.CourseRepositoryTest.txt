@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.knoldus.springbootJPA.repository.CourseRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in com.knoldus.springbootJPA.repository.CourseRepositoryTest
+printCourses  Time elapsed: 0.03 s  <<< ERROR!
+org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 2, for class: com.knoldus.springbootJPA.entity.CourseMaterial
+	at com.knoldus.springbootJPA.repository.CourseRepositoryTest.printCourses(CourseRepositoryTest.java:21)
+Caused by: org.hibernate.HibernateException: More than one row with the given identifier was found: 2, for class: com.knoldus.springbootJPA.entity.CourseMaterial
+	at com.knoldus.springbootJPA.repository.CourseRepositoryTest.printCourses(CourseRepositoryTest.java:21)
+
